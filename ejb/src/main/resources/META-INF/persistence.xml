@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+    <persistence-unit name="PersisUnit" transaction-type="JTA">
+        <jta-data-source>jdbc/cargo_system</jta-data-source>
+        <class>com.cargosys.app.ejb.entity.User</class>
+        <class>com.cargosys.app.ejb.entity.Country</class>
+        <class>com.cargosys.app.ejb.entity.CargoLocation</class>
+        <class>com.cargosys.app.ejb.entity.Route</class>
+        <class>com.cargosys.app.ejb.entity.ShipmentCargo</class>
+        <class>com.cargosys.app.ejb.entity.ShipmentCargoNotes</class>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
